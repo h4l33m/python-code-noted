@@ -8,8 +8,47 @@ def occurDict(items):
 return d
 
 https://www.hackerrank.com/challenges/counting-valleys/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup&h_r=next-challenge&h_v=zen
+#!/bin/python
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the countingValleys function below.
 def countingValleys(n, s):
     #print n
+    s = split(s)
     #print s
+    altitude = 0
+    tebing = 0
     for i in s:
-        if s[i] == "U"
+        #print i
+
+        if (i=="U"):
+            altitude = altitude + 1
+            if (altitude == 0):
+                tebing = tebing + 1
+        elif (i=="D"):
+            altitude = altitude - 1 
+
+    return tebing
+
+        
+def split(word): 
+    return [char for char in word]
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(raw_input())
+
+    s = raw_input()
+
+    result = countingValleys(n, s)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
