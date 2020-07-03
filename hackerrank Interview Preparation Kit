@@ -1,0 +1,15 @@
+def occurDict(items):
+    d = {}
+    for i in items:
+        if i in d:
+            d[i] = d[i]+1
+        else:
+            d[i] = 1
+return d
+
+https://www.hackerrank.com/challenges/counting-valleys/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup&h_r=next-challenge&h_v=zen
+def countingValleys(n, s):
+    #print n
+    #print s
+    for i in s:
+        if s[i] == "U"
