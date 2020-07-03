@@ -1,0 +1,8 @@
+https://www.hackerrank.com/challenges/repeated-string/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup
+
+sum_a = 0
+    num_char = 0
+
+    while num_char < n:
+        sum_a = sum_a + s.count('a')
+        num_char = num_char - len(s)
