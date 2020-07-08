@@ -1,0 +1,33 @@
+n = 1211
+b = 3
+
+k = len(str(n))
+s = str(n)
+
+r = []
+
+i=0
+while int(s) not in r:
+
+  res = [int(j) for j in s] 
+
+  for a in range(k-len(s)):
+    res.insert(0,0)
+
+  r.append (int("".join(map(str, res))))
+
+  x = sorted(res,reverse=True)
+  y = sorted(res)
+
+  x = int("".join(map(str, x)))
+  y = int("".join(map(str, y))) 
+
+  s = str(x-y)
+  i+=1
+  #print i ,s ,len(r), r
+  
+  if int(s) == r[len(r)-1]:
+    print 1
+    #return 1
+
+print r
