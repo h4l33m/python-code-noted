@@ -1,0 +1,31 @@
+def solution(l):
+    # Your code here
+    # Your code here
+  from itertools import combinations
+  from itertools import permutations 
+
+  k = len(l)-1
+  maxi = 0
+
+  pl = permutations(l) 
+  for i in list(pl):
+    n = int("".join(map(str, i))) 
+    if n%3 == 0:
+      if maxi < n:
+        maxi = n
+
+  if maxi != 0:
+    return maxi
+
+  l = sorted(l,reverse=True)
+  
+  while k > 0:
+    cl = combinations(l, k)
+    for i in list(cl): 
+      n = int("".join(map(str, i)))
+      if n%3 == 0:
+        return n
+    k-=1 
+      
+  return 0
+
