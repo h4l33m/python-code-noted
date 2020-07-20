@@ -1,0 +1,33 @@
+#!/bin/python
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the alternatingCharacters function below.
+def alternatingCharacters(s):
+    s = list(s)
+    ls = len(s)
+    d = 0
+    for i in range(ls-1):
+        if s[i] == s[i+1]:
+            d+=1    
+
+    return d
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    q = int(raw_input())
+
+    for q_itr in xrange(q):
+        s = raw_input()
+
+        result = alternatingCharacters(s)
+
+        fptr.write(str(result) + '\n')
+
+    fptr.close()
